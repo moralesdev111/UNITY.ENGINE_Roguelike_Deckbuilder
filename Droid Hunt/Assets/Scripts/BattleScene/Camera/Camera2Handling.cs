@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Camera2Handling : MonoBehaviour
 {
@@ -9,10 +10,16 @@ public class Camera2Handling : MonoBehaviour
     [SerializeField] float rotationSpeed = 1f; // Speed of rotation
     private bool isRotating = false;
     private Vector3 lastMousePosition;
+    private EventSystem eventSystem;
+
+    private void Start()
+    {
+        eventSystem = EventSystem.current;
+    }
 
     private void Update()
     {
-        if (!isRotating && Input.GetMouseButtonDown(0) && IsWithinCameraViewport(Input.mousePosition))
+        if (!isRotating && Input.GetMouseButtonDown(0) && IsWithinCameraViewport(Input.mousePosition) && !eventSystem.IsPointerOverGameObject())
         {
             isRotating = true;
             lastMousePosition = Input.mousePosition;

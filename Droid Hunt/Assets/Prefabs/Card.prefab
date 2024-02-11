@@ -1080,9 +1080,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2601923514592466139}
-  - component: {fileID: 6140560470313825004}
   - component: {fileID: 1784082248710565476}
   - component: {fileID: 5624667526492426613}
+  - component: {fileID: 6140560470313825004}
+  - component: {fileID: 2820693170238426499}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -1110,24 +1111,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6140560470313825004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8084383718473146426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb47f7fd046cd39409c57a2b488a13f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 0}
-  cardName: {fileID: 2482262481583950526}
-  cardAbility: {fileID: 8104534852177095748}
-  artwork: {fileID: 8182683104791783240}
-  energyCost: {fileID: 1121372766751906010}
-  utilityValue: {fileID: 8178449076804939970}
 --- !u!114 &1784082248710565476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,3 +1176,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 200, y: 300}
   m_EdgeRadius: 0
+--- !u!114 &6140560470313825004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084383718473146426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb47f7fd046cd39409c57a2b488a13f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  cardName: {fileID: 2482262481583950526}
+  cardAbility: {fileID: 8104534852177095748}
+  artwork: {fileID: 8182683104791783240}
+  energyCost: {fileID: 1121372766751906010}
+  utilityValue: {fileID: 8178449076804939970}
+--- !u!114 &2820693170238426499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084383718473146426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d147e9d359cc64240b9d6f3d3492d8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalScale: {x: 1, y: 1, z: 1}
