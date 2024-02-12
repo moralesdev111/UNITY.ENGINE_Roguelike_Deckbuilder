@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
 
         switch(newState)
         {
+            case GameState.mainMenu:
+            break;
+            
             case GameState.playerTurn:
             aIActions.hasAttacked = false;
             enemyEndsTurn.hasEndedTurn = false;
@@ -67,6 +70,8 @@ public class GameManager : MonoBehaviour
                 battleManager.Victory();
             }
             break;
+            case GameState.pathSelectionScene:
+            break;
         }
     onGameStateChanged?.Invoke(newState);
     }
@@ -74,8 +79,10 @@ public class GameManager : MonoBehaviour
 
     public enum GameState
     {
+        mainMenu,
         playerTurn,
         enemyTurn,
-        finishScreen
+        finishScreen,
+        pathSelectionScene
     }
 }
