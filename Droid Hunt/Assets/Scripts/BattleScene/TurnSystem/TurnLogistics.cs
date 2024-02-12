@@ -17,6 +17,7 @@ public class TurnLogistics : MonoBehaviour
     {
         turnowner.text = isPlayerTurn? "Your Turn" : "enemy turn";
     }
+
     public void InitialTurnSettings()
     {
         isPlayerTurn = true;

@@ -13,13 +13,23 @@ public class GameManager : MonoBehaviour
     public static event Action<GameState> onGameStateChanged;
     [SerializeField] EnemyAttack aIActions;
     [SerializeField] EnemyEndsTurn enemyEndsTurn;
-    public Enemy enemy;
+
 
 
     void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
     void Start()
     {
         UpdateGameState(GameState.playerTurn);

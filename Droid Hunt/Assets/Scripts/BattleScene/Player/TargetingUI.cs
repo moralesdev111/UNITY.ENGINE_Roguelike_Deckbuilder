@@ -16,16 +16,20 @@ public class TargetingUI : MonoBehaviour
     private Vector3 arrowDirection;
     public GameObject target = null;
     [SerializeField] Camera secondaryCamera;
+    [SerializeField] float baseScreenWidth = 1900;
+    [SerializeField] float spacingScale;
     RaycastHit hitInfo;
 
     void OnEnable(){
         secondaryCamera =  secondaryCamera = GameObject.FindWithTag("P2Camera").GetComponent<Camera>();
+        spacingScale = Screen.width / baseScreenWidth;
     }
     void Start()
     {
         arrowInstance = Instantiate(arrowPrefab,transform);
         arrowInstance.transform.localPosition = Vector3.zero;
         InitializeDotPool(poolSize);
+         spacingScale = Screen.width / baseScreenWidth;
     }
 
     void Update()
@@ -40,6 +44,11 @@ public class TargetingUI : MonoBehaviour
         UpdateArc(startPosition,midPoint,mousePos);
         PositionAndRotateArrow(mousePos);
         DetectTarget();
+
+        if(Input.GetMouseButton(1))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void InitializeDotPool(int count)
@@ -62,7 +71,7 @@ public class TargetingUI : MonoBehaviour
 
     void UpdateArc(Vector3 start, Vector3 mid, Vector3 end)
     {
-        int numDots = Mathf.CeilToInt(Vector3.Distance(start,end)/ spacing);
+        int numDots = Mathf.CeilToInt(Vector3.Distance(start,end)/ (spacing * spacingScale));
 
         for(int i = 0; i <numDots && i < dotPool.Count; i++)
         {

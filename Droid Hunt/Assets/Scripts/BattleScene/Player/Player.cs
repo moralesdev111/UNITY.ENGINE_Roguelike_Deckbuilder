@@ -4,6 +4,7 @@ public class Player : Robot
 {
     public int maxEnergy;
     public int currentEnergy;
+    public int gold;
     [SerializeField] TextMeshProUGUI currentEnergyDisplay;
 
 

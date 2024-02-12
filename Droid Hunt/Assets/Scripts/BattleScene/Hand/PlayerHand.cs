@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerHand : SlotContainer
 {
-    [SerializeField] Transform hand;
     [SerializeField] DrawCard drawCard;
     [SerializeField] PlayerDeck playerDeck;
     [SerializeField] DrawToHand drawToHand;
