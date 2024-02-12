@@ -33,7 +33,7 @@ public class PlayerHand : SlotContainer
         }
     }
 
-    private void StartDrawProcess()
+    public void StartDrawProcess()
     {
         if(CurrentContainerSize < ContainerSizeLimit)
         {

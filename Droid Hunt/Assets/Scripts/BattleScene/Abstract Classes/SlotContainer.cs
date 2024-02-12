@@ -11,7 +11,8 @@ public abstract class SlotContainer : MonoBehaviour
         get{return container.Count;}
         protected set{currentContainerSize = value;}
     }
-    [SerializeField] protected List<Card> container;
+    
+    protected List<Card> container;
     public List<Card> Container
     {
         get { return container; }

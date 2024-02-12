@@ -5,6 +5,10 @@ using TMPro;
 
 public class Enemy : Robot
 {
+    public EnemyRobot enemyRobot;
+    [SerializeField] TextMeshProUGUI robotName;
+
+
     void Start()
     {
         SetupStats();
@@ -22,7 +26,8 @@ public class Enemy : Robot
 
     public override void SetupStats()
     {
-        maxParts = 30;
+        maxParts = enemyRobot.maxParts;
         currentParts = maxParts;
+        robotName.text = enemyRobot.robotName;
     }
 }

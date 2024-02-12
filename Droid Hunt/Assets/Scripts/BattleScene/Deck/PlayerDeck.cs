@@ -37,11 +37,11 @@ public class PlayerDeck : SlotContainer
         }
     }
 
-    public void RemoveCard(Card card)
+    public void RemoveCard(Card card, List<Card> container)
     {
-        if (Container.Contains(card))
+        if (container.Contains(card))
         {
-            Container.Remove(card);
+            container.Remove(card);
         }
     }
 }
