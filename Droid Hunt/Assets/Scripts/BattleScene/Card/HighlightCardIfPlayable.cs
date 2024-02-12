@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -10,11 +8,25 @@ public class HighlightCardIfPlayable : MonoBehaviour
 
     void Update()
     {
-        ChangeColorBasedOnAvailableEnergy();
+        HighlightIfAllowed();
     }
 
-    private void ChangeColorBasedOnAvailableEnergy()
+    private void HighlightIfAllowed()
     {
-        image.color = GameManager.Instance.player.currentEnergy >= this.GetComponent<CardInstance>().card.energyCost ? material.color = material.color : Color.white;
+        if (GameManager.Instance.currentGameState == GameManager.GameState.playerTurn)
+        {
+            if (GameManager.Instance.player.currentEnergy >= GetComponent<CardInstance>().card.energyCost)
+            {
+                image.color = material.color;
+            }
+            else
+            {
+                image.color = Color.white;
+            }
+        }
+        else
+        {
+            image.color = Color.white;
+        }
     }
 }

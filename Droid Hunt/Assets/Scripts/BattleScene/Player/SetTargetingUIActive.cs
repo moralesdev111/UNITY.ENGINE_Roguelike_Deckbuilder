@@ -15,9 +15,21 @@ public class SetTargetingUIActive : MonoBehaviour, IPointerClickHandler
 
     private void CheckIfWeCanPlayCard(PointerEventData eventData)
     {
-        if (GameManager.Instance.player.currentEnergy >= eventData.pointerClick.GetComponent<CardInstance>().card.energyCost)
+        CardInstance currentCard = eventData.pointerClick.GetComponent<CardInstance>();
+        if (GameManager.Instance.player.currentEnergy >= currentCard.card.energyCost)
         {
-            playArrow.SetActive(true);
+            if(currentCard.card.cardType == Card.CardType.utility)
+            {
+                GameManager.Instance.player.currentEnergy -= currentCard.card.energyCost;
+                GameManager.Instance.player.currentParts += currentCard.card.utilityValue;
+                GameManager.Instance.playerHand.Container.Remove(currentCard.card);
+                Destroy(currentCard.gameObject);
+            }
+            else
+            {
+                playArrow.SetActive(true);
+            }
+            
         }
         else
         {
