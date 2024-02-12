@@ -7,6 +7,7 @@ public class Enemy : Robot
 {
     public EnemyRobot enemyRobot;
     [SerializeField] TextMeshProUGUI robotName;
+    [SerializeField] TextMeshProUGUI attackDamage;
 
 
     void Start()
@@ -29,5 +30,6 @@ public class Enemy : Robot
         maxParts = enemyRobot.maxParts;
         currentParts = maxParts;
         robotName.text = enemyRobot.robotName;
+        attackDamage.text = enemyRobot.attack.ToString();
     }
 }

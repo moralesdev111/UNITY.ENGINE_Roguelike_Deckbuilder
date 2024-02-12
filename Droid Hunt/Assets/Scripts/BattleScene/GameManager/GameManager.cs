@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public PlayerHand playerHand;
     public Player player;
+    public Enemy enemy;
     public GameState currentGameState;
     public static event Action<GameState> onGameStateChanged;
     [SerializeField] EnemyAttack aIActions;
@@ -50,11 +51,15 @@ public class GameManager : MonoBehaviour
             case GameState.playerTurn:
             aIActions.hasAttacked = false;
             enemyEndsTurn.hasEndedTurn = false;
-
-            
             break;
+
             case GameState.enemyTurn:
             break;
+
+            case GameState.finishScreen:
+            break;
+
+
         }
     onGameStateChanged?.Invoke(newState);
     }
@@ -64,5 +69,6 @@ public class GameManager : MonoBehaviour
     {
         playerTurn,
         enemyTurn,
+        finishScreen
     }
 }

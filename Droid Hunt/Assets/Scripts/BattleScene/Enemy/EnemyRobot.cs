@@ -8,5 +8,6 @@ public class EnemyRobot : ScriptableObject
     public string robotName;
     public int attack;
     public int maxParts;
+    public int reward;
     public GameObject robotModel;
 }
