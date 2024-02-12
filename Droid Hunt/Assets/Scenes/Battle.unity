@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 516760744}
   m_Layer: 5
   m_Name: BattleCanvas
-  m_TagString: Untagged
+  m_TagString: BattleCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3065,6 +3065,7 @@ MonoBehaviour:
   cardDatabase:
   - {fileID: 11400000, guid: 1c564e332e8e6af4ea60e2fa2ebd633e, type: 2}
   - {fileID: 11400000, guid: d87eed92350ce9441bed9418f7cce890, type: 2}
+  - {fileID: 11400000, guid: 11c98f543b086dc4f8efab7a00b08e07, type: 2}
 --- !u!4 &1295481377
 Transform:
   m_ObjectHideFlags: 0

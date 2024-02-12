@@ -6,15 +6,15 @@ Sprite:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Default_toon_themed_screw_and_bolts_0_0
+  m_Name: MechaFury
   m_Rect:
     serializedVersion: 2
-    x: 388
-    y: 381
-    width: 103
-    height: 419
+    x: 0
+    y: 0
+    width: 368
+    height: 312
   m_Offset: {x: 0, y: 0}
-  m_Border: {x: 0, y: 0, z: 0, w: 0}
+  m_Border: {x: 22, y: 0, z: 13, w: 0}
   m_PixelsToUnits: 100
   m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
@@ -22,12 +22,12 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    b34c1d7cefb700a4c976d27434da4ec7: -619753111
+    2a40dc84b5bf1b2438a8726aa136cd43: 2113037763
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: b34c1d7cefb700a4c976d27434da4ec7, type: 3}
+    texture: {fileID: 2800000, guid: 2a40dc84b5bf1b2438a8726aa136cd43, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -103,22 +103,22 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 0ad703bf7b140640000000000ad7033f7b1406c0000000000ad7033f7b140640000000000ad703bf7b1406c00000000033331b3f6227763f6666443f2776ea3e6666443f6227763f33331b3f2776ea3e
+      _typelessdata: 1f85ebbf14aec73f000000001f85eb3f14aec7bf000000001f85eb3f14aec73f000000001f85ebbf14aec7bf00000000000000000000c03e3333133f000000003333133f0000c03e0000000000000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 388
-      y: 381
-      width: 103
-      height: 419
+      x: 0
+      y: 0
+      width: 368
+      height: 312
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
-    uvTransform: {x: 100, y: 439.5, z: 100, w: 590.5}
+    uvTransform: {x: 100, y: 184, z: 100, w: 156}
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: b34c1d7cefb700a4c976d27434da4ec7, type: 3}
+    texture: {fileID: 2800000, guid: 2a40dc84b5bf1b2438a8726aa136cd43, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:
@@ -194,23 +194,23 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 0ad703bf7b140640000000000ad7033f7b1406c0000000000ad7033f7b140640000000000ad703bf7b1406c00000000033331b3f6227763f6666443f2776ea3e6666443f6227763f33331b3f2776ea3e
+      _typelessdata: 1f85ebbf14aec73f000000001f85eb3f14aec7bf000000001f85eb3f14aec73f000000001f85ebbf14aec7bf00000000000000000000c03e3333133f000000003333133f0000c03e0000000000000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
-      x: 388
-      y: 381
-      width: 103
-      height: 419
+      x: 0
+      y: 0
+      width: 368
+      height: 312
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
-    uvTransform: {x: 100, y: 439.5, z: 100, w: 590.5}
+    uvTransform: {x: 100, y: 184, z: 100, w: 156}
     downscaleMultiplier: 1
   m_PhysicsShape:
-  - - {x: -0.515, y: 2.095}
-    - {x: -0.515, y: -2.095}
-    - {x: 0.515, y: -2.095}
-    - {x: 0.515, y: 2.095}
+  - - {x: -1.8399999, y: 1.56}
+    - {x: -1.8399999, y: -1.56}
+    - {x: 1.8399999, y: -1.56}
+    - {x: 1.8399999, y: 1.56}
   m_Bones: []
-  m_SpriteID: dd4667d29daffcd48b341c1a112df47d
+  m_SpriteID: 27f141ed8d85da246a469c15f1e98032

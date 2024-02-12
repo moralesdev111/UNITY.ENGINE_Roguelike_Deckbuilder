@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Target
   - P2Camera
+  - BattleCanvas
   layers:
   - Default
   - TransparentFX

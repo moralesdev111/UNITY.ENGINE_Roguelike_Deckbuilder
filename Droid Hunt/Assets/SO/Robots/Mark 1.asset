@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mark 1
   m_EditorClassIdentifier: 
   robotName: Mark 1
-  attack: 13
-  maxParts: 25
+  attack: 10
+  maxParts: 15
   reward: 8
   robotModel: {fileID: 0}

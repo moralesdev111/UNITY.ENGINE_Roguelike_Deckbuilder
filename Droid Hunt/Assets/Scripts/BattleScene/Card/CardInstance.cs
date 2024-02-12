@@ -22,6 +22,7 @@ public class CardInstance : MonoBehaviour
 
     private void SetInstanceData()
     {
+        this.name = card.name;
         cardName.text = card.name;
         cardAbility.text = card.cardAbility;
         artwork.sprite = card.artwork;
