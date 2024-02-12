@@ -17,6 +17,7 @@ public class PlayCard : MonoBehaviour, IPointerClickHandler
     private void PlaceHolderPlayCard(PointerEventData eventData)
     {
         GameManager.Instance.player.currentEnergy -= eventData.pointerClick.GetComponent<CardInstance>().card.energyCost;
+        GameManager.Instance.enemy.currentParts -= eventData.pointerClick.GetComponent<CardInstance>().card.utilityValue;
         Destroy(gameObject);
         GameManager.Instance.playerHand.Container.Remove(eventData.pointerClick.GetComponent<CardInstance>().card);
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIActions : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] EnemyRobot enemyRobot;
     [SerializeField] Player player;
@@ -23,8 +23,14 @@ public class AIActions : MonoBehaviour
     {
         if(newState == GameManager.GameState.enemyTurn && !hasAttacked)
         {
-            player.currentParts -= enemyRobot.attack;
-            hasAttacked = true;
+            StartCoroutine(DelayAttackStart());
         }
+    }
+
+    IEnumerator DelayAttackStart()
+    {
+        yield return new WaitForSeconds(1f);
+        player.currentParts -= enemyRobot.attack;
+        hasAttacked = true;
     }
 }

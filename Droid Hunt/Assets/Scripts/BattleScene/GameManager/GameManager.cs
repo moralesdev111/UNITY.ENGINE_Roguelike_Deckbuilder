@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public Player player;
     public GameState currentGameState;
     public static event Action<GameState> onGameStateChanged;
-    [SerializeField] AIActions aIActions;
+    [SerializeField] EnemyAttack aIActions;
+    [SerializeField] EnemyEndsTurn enemyEndsTurn;
+    public Enemy enemy;
 
 
     void Awake()
@@ -37,6 +39,9 @@ public class GameManager : MonoBehaviour
         {
             case GameState.playerTurn:
             aIActions.hasAttacked = false;
+            enemyEndsTurn.hasEndedTurn = false;
+
+            
             break;
             case GameState.enemyTurn:
             break;

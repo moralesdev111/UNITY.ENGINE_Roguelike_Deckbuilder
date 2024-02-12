@@ -21,7 +21,7 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    public void EndOpponentTurn()
+    public void EndEnemyTurn()
     {
         if(!turnSettings.isPlayerTurn)
         {
