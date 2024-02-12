@@ -31,6 +31,10 @@ public class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         player.currentParts -= enemyRobot.attack;
+        if (player.currentParts <= 0)
+        {
+            GameManager.Instance.UpdateGameState(GameManager.GameState.finishScreen);
+        }
         hasAttacked = true;
     }
 }

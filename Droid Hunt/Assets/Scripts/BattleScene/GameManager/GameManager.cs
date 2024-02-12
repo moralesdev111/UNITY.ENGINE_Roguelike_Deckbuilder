@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static event Action<GameState> onGameStateChanged;
     [SerializeField] EnemyAttack aIActions;
     [SerializeField] EnemyEndsTurn enemyEndsTurn;
+    [SerializeField] BattleManager battleManager;
 
 
 
@@ -57,9 +58,15 @@ public class GameManager : MonoBehaviour
             break;
 
             case GameState.finishScreen:
+            if (player.currentParts <= 0)
+            {
+                battleManager.Defeat();
+            }
+            else if(enemy.currentParts <= 0)
+            {
+                battleManager.Victory();
+            }
             break;
-
-
         }
     onGameStateChanged?.Invoke(newState);
     }

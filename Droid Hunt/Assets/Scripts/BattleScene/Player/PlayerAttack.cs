@@ -10,5 +10,9 @@ public class PlayerAttack : MonoBehaviour
         GameManager.Instance.player.currentEnergy -= cardInPlay.card.energyCost;
         GameManager.Instance.playerHand.Container.Remove(cardInPlay.card);
         Destroy(transform.parent.gameObject);
+        if (enemy.currentParts <= 0)
+        {
+            GameManager.Instance.UpdateGameState(GameManager.GameState.finishScreen);
+        }
     }
 }

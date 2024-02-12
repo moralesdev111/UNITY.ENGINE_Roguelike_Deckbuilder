@@ -27,4 +27,5 @@ public class BattleManager : MonoBehaviour
     blurPanel.SetActive(true);
     winFinishScreenCanvas.SetActive(true);
    }
+   
 }
