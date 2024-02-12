@@ -14,16 +14,18 @@ public class TargetingUI : MonoBehaviour
     public float arrowAngleAdjustment = 0;
     public int dotsToSkip = 1;
     private Vector3 arrowDirection;
-    public GameObject target = null;
-    [SerializeField] Camera secondaryCamera;
+   
+   
     [SerializeField] float baseScreenWidth = 1900;
     [SerializeField] float spacingScale;
-    RaycastHit hitInfo;
+    [SerializeField] DetectTarget detectTarget;
+   
 
-    void OnEnable(){
-        secondaryCamera =  secondaryCamera = GameObject.FindWithTag("P2Camera").GetComponent<Camera>();
+    void OnEnable()
+    {
         spacingScale = Screen.width / baseScreenWidth;
     }
+
     void Start()
     {
         arrowInstance = Instantiate(arrowPrefab,transform);
@@ -43,7 +45,7 @@ public class TargetingUI : MonoBehaviour
 
         UpdateArc(startPosition,midPoint,mousePos);
         PositionAndRotateArrow(mousePos);
-        DetectTarget();
+        detectTarget.DetectTargets();
 
         if(Input.GetMouseButton(1))
         {
@@ -120,47 +122,6 @@ public class TargetingUI : MonoBehaviour
         float angle = Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg;
         angle += arrowAngleAdjustment;
         arrowInstance.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
-
-    void DetectTarget()
-    {
-        Ray ray = secondaryCamera.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hitInfo))
-            {
-                // Check if the hit object is your target
-                if (hitInfo.collider.CompareTag("Target"))
-                {
-                    if (Input.GetMouseButton(0))
-                    {
-                         target = hitInfo.collider.gameObject;
-                        Enemy enemy = target.GetComponent<Enemy>();
-                    
-                        if (enemy != null)
-                        {
-                            CardInstance cardInPlay = GetComponentInParent<CardInstance>();
-                            if (cardInPlay != null)
-                            {
-                                enemy.currentParts -= cardInPlay.card.utilityValue;
-                                GameManager.Instance.player.currentEnergy -= cardInPlay.card.energyCost;
-                                GameManager.Instance.playerHand.Container.Remove(cardInPlay.card);
-                                Destroy(transform.parent.gameObject);
-                                // You may want to add additional actions or checks here
-                            }
-                    else
-                    {
-                        Debug.LogWarning("CardInstance component is missing.");
-                    }
-                }
-                else
-                {
-                    Debug.LogWarning("Enemy component is missing.");
-                }
-                    gameObject.SetActive(false);
-            }
-                    
-          }
-        }
     }
 }
         

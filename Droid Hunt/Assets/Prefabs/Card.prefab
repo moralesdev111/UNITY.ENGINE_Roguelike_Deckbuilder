@@ -453,6 +453,8 @@ GameObject:
   - component: {fileID: 3275919143347912084}
   - component: {fileID: 3590167242804142401}
   - component: {fileID: 3440760551825629077}
+  - component: {fileID: 568133237883916721}
+  - component: {fileID: 4711979285326452751}
   m_Layer: 5
   m_Name: PlayArrow
   m_TagString: Untagged
@@ -497,7 +499,9 @@ MonoBehaviour:
   spacing: 40
   arrowAngleAdjustment: 180
   dotsToSkip: 2
-  target: {fileID: 0}
+  baseScreenWidth: 1900
+  spacingScale: 0
+  detectTarget: {fileID: 568133237883916721}
 --- !u!65 &3590167242804142401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -546,6 +550,33 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &568133237883916721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360747151238496221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a2ba0316abb3429c67272964fd24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  secondaryCamera: {fileID: 0}
+  playerAttack: {fileID: 4711979285326452751}
+--- !u!114 &4711979285326452751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360747151238496221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aef4f184d9a8f4abee5abc425b49c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3450844859505928306
 GameObject:
   m_ObjectHideFlags: 0
