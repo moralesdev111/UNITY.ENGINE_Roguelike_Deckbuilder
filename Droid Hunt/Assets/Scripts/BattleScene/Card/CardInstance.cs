@@ -12,21 +12,30 @@ public class CardInstance : MonoBehaviour
     [SerializeField] TextMeshProUGUI cardAbility;
     [SerializeField] Image artwork;
     [SerializeField] TextMeshProUGUI energyCost;
-    [SerializeField] TextMeshProUGUI utilityValue;
+    [SerializeField] Material attackMaterial;
+     [SerializeField] Material utilityMaterial;
 
-
-      void Start()
+    void Start()
     {
         SetInstanceData();
     }
 
     private void SetInstanceData()
     {
-        this.name = card.name;
-        cardName.text = card.name;
+        this.name = card.cardName;
+        cardName.text = card.cardName;
         cardAbility.text = card.cardAbility;
         artwork.sprite = card.artwork;
         energyCost.text = card.energyCost.ToString();
-        utilityValue.text = card.utilityValue.ToString();
+
+        // Check card type and change text color accordingly
+        if (card.cardType == Card.CardType.attack)
+        {
+            cardAbility.color = attackMaterial.color; // Set color to red for attack cards
+        }
+        else if (card.cardType == Card.CardType.utility)
+        {
+            cardAbility.color = utilityMaterial.color; // Set color to blue for utility cards
+        }
     }
 }
