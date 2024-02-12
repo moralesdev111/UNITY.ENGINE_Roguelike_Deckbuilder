@@ -24,7 +24,7 @@ public class CardInstance : MonoBehaviour
     {
         this.name = card.cardName;
         cardName.text = card.cardName;
-        cardAbility.text = card.cardAbility;
+        cardAbility.text = card.cardAbilityDescription;
         artwork.sprite = card.artwork;
         energyCost.text = card.energyCost.ToString();
 

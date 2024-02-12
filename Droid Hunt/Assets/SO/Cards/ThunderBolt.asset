@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ThunderBolt
   m_EditorClassIdentifier: 
   cardName: Thunderbolt
-  cardAbility: Deal 2 Damage
+  cardAbilityDescription: Deal 2 Damage
   artwork: {fileID: 21300000, guid: 7ce100073086c5c4c944bea4151c732c, type: 2}
   energyCost: 1
   utilityValue: 2
