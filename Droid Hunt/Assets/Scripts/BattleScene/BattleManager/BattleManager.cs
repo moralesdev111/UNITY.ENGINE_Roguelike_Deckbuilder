@@ -10,28 +10,26 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject loseFinishScreenCanvas;
     [SerializeField] GameObject winFinishScreenCanvas;
     [SerializeField] GameObject blurPanel;
-    [SerializeField] Button mainMenuButton;
-    [SerializeField] Button pathSelectionSceneButton;
     [SerializeField] TextMeshProUGUI reward;
     [SerializeField] Player player;
-    [SerializeField] Enemy enemy;
+    [SerializeField] EnemyInstance enemyInstance;
+
 
     private void Start()
     {
-       reward.text = enemy.enemyRobot.reward.ToString();
+      reward.text = enemyInstance.enemyToFace.enemyRobot.reward.ToString();
     }
+
    public void Defeat()
    {
     blurPanel.SetActive(true);
     loseFinishScreenCanvas.SetActive(true);
    }
 
-
    public void Victory()
    {
     blurPanel.SetActive(true);
     winFinishScreenCanvas.SetActive(true);
-    player.gold += enemy.enemyRobot.reward;
+    player.gold += enemyInstance.enemyToFace.enemyRobot.reward;
    }
-   
 }

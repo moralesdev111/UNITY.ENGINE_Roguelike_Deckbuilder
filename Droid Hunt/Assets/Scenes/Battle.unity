@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 119376286}
   - component: {fileID: 119376287}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyInstance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ecba465d7b07048ae19d1112496519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRobot: {fileID: 11400000, guid: 4c1e7b0320d52294babc33f801c6dffe, type: 2}
+  enemyInstance: {fileID: 119376287}
   player: {fileID: 2084387377}
   hasAttacked: 0
 --- !u!114 &119376286
@@ -363,9 +363,9 @@ MonoBehaviour:
   maxParts: 10
   currentParts: 0
   currentPartsDisplay: {fileID: 1738048970}
-  enemyRobot: {fileID: 11400000, guid: 4c1e7b0320d52294babc33f801c6dffe, type: 2}
   robotName: {fileID: 875529972}
   attackDamage: {fileID: 1127264714}
+  enemyToFace: {fileID: 11400000, guid: c64177c8ce3b35047bc012a392ddde90, type: 2}
 --- !u!1 &185982522
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,11 +506,9 @@ MonoBehaviour:
   loseFinishScreenCanvas: {fileID: 2012311179}
   winFinishScreenCanvas: {fileID: 346233288}
   blurPanel: {fileID: 1604247574}
-  mainMenuButton: {fileID: 2138761126}
-  pathSelectionSceneButton: {fileID: 338505339}
   reward: {fileID: 1802646120}
   player: {fileID: 2084387377}
-  enemy: {fileID: 119376287}
+  enemyInstance: {fileID: 119376287}
 --- !u!4 &307302258
 Transform:
   m_ObjectHideFlags: 0

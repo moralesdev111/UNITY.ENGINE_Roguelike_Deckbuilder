@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Enemy : Robot
+public class EnemyInstance : Robot
 {
-    public EnemyRobot enemyRobot;
     [SerializeField] TextMeshProUGUI robotName;
     [SerializeField] TextMeshProUGUI attackDamage;
+    public EnemyToFace enemyToFace;
 
 
     void Start()
@@ -27,9 +27,9 @@ public class Enemy : Robot
 
     public override void SetupStats()
     {
-        maxParts = enemyRobot.maxParts;
-        currentParts = maxParts;
-        robotName.text = enemyRobot.robotName;
-        attackDamage.text = enemyRobot.attack.ToString();
+        maxParts = enemyToFace.enemyRobot.maxParts;
+        currentParts = enemyToFace.enemyRobot.maxParts;
+        robotName.text = enemyToFace.enemyRobot.robotName;
+        attackDamage.text = enemyToFace.enemyRobot.attack.ToString();
     }
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd90591c1d78624bbbd51f7935c2cf7, type: 3}
   m_Name: EnemyToFace
   m_EditorClassIdentifier: 
-  enemyRobot: {fileID: 0}
+  enemyRobot: {fileID: 11400000, guid: a8e2a935107890c42beb70025f9f7db9, type: 2}

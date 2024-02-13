@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] EnemyRobot enemyRobot;
+    [SerializeField] EnemyInstance enemyInstance;
     [SerializeField] Player player;
     public bool hasAttacked = false;
 
@@ -30,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
     IEnumerator DelayAttackStart()
     {
         yield return new WaitForSeconds(1f);
-        player.currentParts -= enemyRobot.attack;
+        player.currentParts -= enemyInstance.enemyToFace.enemyRobot.attack;
         if (player.currentParts <= 0)
         {
             GameManager.Instance.UpdateGameState(GameManager.GameState.finishScreen);

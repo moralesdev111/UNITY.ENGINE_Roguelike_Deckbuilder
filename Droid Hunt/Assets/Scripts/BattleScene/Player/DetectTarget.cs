@@ -26,7 +26,7 @@ public class DetectTarget : MonoBehaviour
                     if (Input.GetMouseButton(0))
                     {
                          target = hitInfo.collider.gameObject;
-                        Enemy enemy = GameManager.Instance.enemy.GetComponent<Enemy>();
+                        EnemyInstance enemy = GameManager.Instance.enemy.GetComponent<EnemyInstance>();
                         
                     
                         if (enemy != null)

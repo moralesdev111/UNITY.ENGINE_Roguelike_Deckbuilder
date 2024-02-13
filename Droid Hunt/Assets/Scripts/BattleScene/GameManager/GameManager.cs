@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public PlayerHand playerHand;
     public Player player;
-    public Enemy enemy;
+    public EnemyInstance enemy;
     public GameState currentGameState;
     public static event Action<GameState> onGameStateChanged;
     [SerializeField] EnemyAttack aIActions;
@@ -19,29 +19,23 @@ public class GameManager : MonoBehaviour
 
 
     void Awake()
-    {
-        if(Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if(Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+{
+     if (!Instance)
+     {
+          Instance = this;
+     }
+     else
+     {
+          //Duplicate GameManager created every time the scene is loaded
+          Destroy(gameObject);
+     }
+}
 
 
     void Start()
     {
         UpdateGameState(GameState.playerTurn);
     }
-
-    void Update()
-    {
-        DontDestroyOnLoad(this);
-    }
-
 
     public void UpdateGameState(GameState newState)
     {

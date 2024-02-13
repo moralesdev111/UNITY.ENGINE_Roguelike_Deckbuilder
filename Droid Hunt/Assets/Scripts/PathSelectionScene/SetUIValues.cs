@@ -12,11 +12,17 @@ public class SetUIValues : MonoBehaviour
     
     void Start()
     {
-        if(GameManager.Instance == null)
+        SetPathSceneUIValues();
+    }
+
+    private void SetPathSceneUIValues()
+    {
+        if (GameManager.Instance == null)
         {
-            return;
+             gold.text = "Gold: ";
+             parts.text = "Parts: 50";
         }
-        else
+        else if(GameManager.Instance != null)
         {
             gold.text = "Gold: " + GameManager.Instance.player.gold.ToString();
             parts.text = "Parts: " + GameManager.Instance.player.currentParts.ToString();

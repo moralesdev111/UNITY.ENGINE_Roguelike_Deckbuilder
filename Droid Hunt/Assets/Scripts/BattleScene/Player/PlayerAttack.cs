@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public void HandleAttack(Enemy enemy, CardInstance cardInPlay)
+    public void HandleAttack(EnemyInstance enemy, CardInstance cardInPlay)
     {
         if(cardInPlay.card.cardType == Card.CardType.attack)
         {
