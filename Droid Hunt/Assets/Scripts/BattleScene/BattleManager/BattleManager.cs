@@ -13,6 +13,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI reward;
     [SerializeField] Player player;
     [SerializeField] EnemyInstance enemyInstance;
+    [SerializeField] PlayerProgression playerProgression;
 
 
     private void Start()
@@ -30,6 +31,7 @@ public class BattleManager : MonoBehaviour
    {
     blurPanel.SetActive(true);
     winFinishScreenCanvas.SetActive(true);
-    player.gold += enemyInstance.enemyToFace.enemyRobot.reward;
+    playerProgression.gold += enemyInstance.enemyToFace.enemyRobot.reward;
+    playerProgression.currentParts = player.currentParts;
    }
 }

@@ -4,9 +4,9 @@ public class Player : Robot
 {
     public int maxEnergy;
     public int currentEnergy;
-    public int gold;
     [SerializeField] TextMeshProUGUI currentEnergyDisplay;
     [SerializeField] TextMeshProUGUI currentGoldDisplay;
+    [SerializeField] PlayerProgression playerProgression;
 
 
     void Start()
@@ -23,7 +23,7 @@ public class Player : Robot
     {
         currentEnergyDisplay.text = "Energy: " + currentEnergy.ToString();
         currentPartsDisplay.text = "Parts: " + currentParts.ToString();
-        currentGoldDisplay.text = "Gold: " + gold.ToString();
+        currentGoldDisplay.text = "Gold: " + playerProgression.gold.ToString();
     }
 
     public override void SetupStats()
@@ -31,6 +31,6 @@ public class Player : Robot
         maxEnergy=5;
         maxParts = 50;
         currentEnergy = maxEnergy;
-        currentParts = maxParts;
+        currentParts = playerProgression.currentParts;
     }
 }

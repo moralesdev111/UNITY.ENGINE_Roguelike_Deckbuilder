@@ -509,6 +509,7 @@ MonoBehaviour:
   reward: {fileID: 1802646120}
   player: {fileID: 2084387377}
   enemyInstance: {fileID: 119376287}
+  playerProgression: {fileID: 11400000, guid: cd59ff3e8dbc9e347b7f2415a816f9e2, type: 2}
 --- !u!4 &307302258
 Transform:
   m_ObjectHideFlags: 0
@@ -5160,9 +5161,9 @@ MonoBehaviour:
   currentPartsDisplay: {fileID: 1161880182}
   maxEnergy: 5
   currentEnergy: 0
-  gold: 0
   currentEnergyDisplay: {fileID: 1320598060}
   currentGoldDisplay: {fileID: 1608347949}
+  playerProgression: {fileID: 11400000, guid: cd59ff3e8dbc9e347b7f2415a816f9e2, type: 2}
 --- !u!1 &2116807138
 GameObject:
   m_ObjectHideFlags: 0

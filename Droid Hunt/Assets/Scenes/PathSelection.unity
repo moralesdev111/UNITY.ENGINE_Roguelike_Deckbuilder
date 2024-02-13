@@ -1253,6 +1253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: {fileID: 555262983}
   parts: {fileID: 1579203819}
+  playerProgression: {fileID: 11400000, guid: cd59ff3e8dbc9e347b7f2415a816f9e2, type: 2}
 --- !u!1 &1510166008
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class SetUIValues : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI gold;
     [SerializeField] TextMeshProUGUI parts;
+    [SerializeField] PlayerProgression playerProgression;
     
     
     void Start()
@@ -17,15 +18,7 @@ public class SetUIValues : MonoBehaviour
 
     private void SetPathSceneUIValues()
     {
-        if (GameManager.Instance == null)
-        {
-             gold.text = "Gold: ";
-             parts.text = "Parts: 50";
-        }
-        else if(GameManager.Instance != null)
-        {
-            gold.text = "Gold: " + GameManager.Instance.player.gold.ToString();
-            parts.text = "Parts: " + GameManager.Instance.player.currentParts.ToString();
-        }
+        gold.text = "Gold: " + playerProgression.gold;
+        parts.text = "Parts: " + playerProgression.currentParts;
     }
 }
