@@ -6,6 +6,7 @@ public class Player : Robot
     public int currentEnergy;
     public int gold;
     [SerializeField] TextMeshProUGUI currentEnergyDisplay;
+    [SerializeField] TextMeshProUGUI currentGoldDisplay;
 
 
     void Start()
@@ -22,6 +23,7 @@ public class Player : Robot
     {
         currentEnergyDisplay.text = "Energy: " + currentEnergy.ToString();
         currentPartsDisplay.text = "Parts: " + currentParts.ToString();
+        currentGoldDisplay.text = "Gold: " + gold.ToString();
     }
 
     public override void SetupStats()
