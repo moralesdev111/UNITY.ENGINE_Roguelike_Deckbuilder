@@ -12,7 +12,14 @@ public class SetUIValues : MonoBehaviour
     
     void Start()
     {
-        gold.text = "Gold: " + GameManager.Instance.player.gold.ToString();
-        parts.text = "Parts: " + GameManager.Instance.player.currentParts.ToString();
+        if(GameManager.Instance == null)
+        {
+            return;
+        }
+        else
+        {
+            gold.text = "Gold: " + GameManager.Instance.player.gold.ToString();
+            parts.text = "Parts: " + GameManager.Instance.player.currentParts.ToString();
+        }
     }
 }

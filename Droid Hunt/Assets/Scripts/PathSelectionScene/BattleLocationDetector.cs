@@ -11,9 +11,4 @@ public class BattleLocationDetector : MonoBehaviour
     {
         image.gameObject.SetActive(true);
     }
-
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        image.gameObject.SetActive(false);
-    }
 }
