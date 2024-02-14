@@ -419,7 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629605123}
   m_Layer: 0
-  m_Name: Background
+  m_Name: MapSprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,9 +454,10 @@ GameObject:
   - component: {fileID: 879701088}
   - component: {fileID: 879701087}
   - component: {fileID: 879701086}
+  - component: {fileID: 879701089}
   m_Layer: 0
-  m_Name: 2BattleLocation
-  m_TagString: Untagged
+  m_Name: BattleLocation1
+  m_TagString: BattleLocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyRobot: {fileID: 11400000, guid: 4c1e7b0320d52294babc33f801c6dffe, type: 2}
-  loadBattleOnClick: {fileID: 1366728007}
+  player2D: {fileID: 1042912237}
 --- !u!61 &879701087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -587,6 +588,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &879701089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879701084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728a9d1bc0bc2f545b97525c476cbd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 53625692}
 --- !u!1 &1042912231
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,12 +611,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1042912233}
   - component: {fileID: 1042912232}
-  - component: {fileID: 1042912234}
   - component: {fileID: 1042912235}
   - component: {fileID: 1042912236}
+  - component: {fileID: 1042912237}
   m_Layer: 0
-  m_Name: PlayerSprite
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -674,19 +688,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1042912234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042912231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728a9d1bc0bc2f545b97525c476cbd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 53625692}
 --- !u!61 &1042912235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -759,6 +760,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1042912237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042912231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f0fc3b37921fb458f2330ce72b3b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visitedLocations: []
+  player2DLocation: {fileID: 1042912233}
+  movementSpeed: 2
+  chosenPath: {fileID: 0}
 --- !u!1 &1113340297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1109,7 @@ GameObject:
   - component: {fileID: 1366728006}
   - component: {fileID: 1366728007}
   m_Layer: 0
-  m_Name: Locations
+  m_Name: PointsOfInterest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1127,12 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c2669b61de21c47bd8c6a3eb87fde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathChoices:
-  - {fileID: 1589266942}
-  - {fileID: 879701084}
-  chosenPath: {fileID: 0}
-  player: {fileID: 1042912233}
-  movementSpeed: 2
+  player2D: {fileID: 1042912237}
   enemyToFace: {fileID: 11400000, guid: c64177c8ce3b35047bc012a392ddde90, type: 2}
   enemyRobot: {fileID: 0}
 --- !u!1 &1504394753
@@ -1533,9 +1545,10 @@ GameObject:
   - component: {fileID: 1589266945}
   - component: {fileID: 1589266944}
   - component: {fileID: 1589266943}
+  - component: {fileID: 1589266947}
   m_Layer: 0
-  m_Name: 1BattleLocation
-  m_TagString: Untagged
+  m_Name: BattleLocation0
+  m_TagString: BattleLocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1553,7 +1566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyRobot: {fileID: 11400000, guid: a8e2a935107890c42beb70025f9f7db9, type: 2}
-  loadBattleOnClick: {fileID: 1366728007}
+  player2D: {fileID: 1042912237}
 --- !u!61 &1589266944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1666,6 +1679,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1366728006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589266947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589266942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728a9d1bc0bc2f545b97525c476cbd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 53625692}
 --- !u!1 &1653746744
 GameObject:
   m_ObjectHideFlags: 0

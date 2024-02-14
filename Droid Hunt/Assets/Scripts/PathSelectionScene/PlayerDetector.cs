@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class BattleLocationDetector : MonoBehaviour
+public class PlayerDetector : MonoBehaviour
 {
     [SerializeField] Image image;
 
     private void OnTriggerStay2D(Collider2D collider)
     {
-        image.gameObject.SetActive(true);
+        if(collider.CompareTag("Player"))
+        {
+            image.gameObject.SetActive(true);
+        }
     }
 }
