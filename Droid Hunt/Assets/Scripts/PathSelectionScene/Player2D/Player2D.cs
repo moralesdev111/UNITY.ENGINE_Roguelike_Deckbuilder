@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 public class Player2D : MonoBehaviour
 {
-    public List<Vector3> visitedLocations = new List<Vector3>();
+    public GameObject[] chosenPaths = new GameObject[5];
     public Transform player2DLocation;
     public float movementSpeed;
     public GameObject chosenPath = null;
@@ -12,7 +12,7 @@ public class Player2D : MonoBehaviour
 
     private void Start()
     {
-        LoadPlayer();
+        //LoadPlayer();
     }
 
 
@@ -20,7 +20,7 @@ public class Player2D : MonoBehaviour
     {
         if (collider.CompareTag("BattleLocation"))
         {
-            visitedLocations.Add(collider.gameObject.transform.position);
+            chosenPaths[0] = (collider.gameObject);
             SavePlayer();
         }
     }

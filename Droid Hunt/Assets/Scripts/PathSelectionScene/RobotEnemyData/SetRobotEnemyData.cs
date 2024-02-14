@@ -19,7 +19,7 @@ public class SetRobotEnemyData : MonoBehaviour
         if (player2D.chosenPath != null)
         {
             player2D.player2DLocation.position = Vector3.MoveTowards(player2D.player2DLocation.position, player2D.chosenPath.transform.position, player2D.movementSpeed * Time.deltaTime);
-            enemyRobot = player2D.chosenPath.GetComponent<SelectPathTarger>().enemyRobot;
+            enemyRobot = player2D.chosenPath.GetComponent<SelectPathTarget>().enemyRobot;
             Debug.Log("player will face" + enemyRobot);
             enemyToFace.enemyRobot = enemyRobot;
         }
