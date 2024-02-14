@@ -10,18 +10,18 @@ public class EnemyAttack : MonoBehaviour
 
     void OnEnable()
     {
-        GameManager.onGameStateChanged += EnemyAttacks;
+        SceneManager.onGameStateChanged += EnemyAttacks;
     }
 
     void OnDisable()
     {
-        GameManager.onGameStateChanged -= EnemyAttacks;
+        SceneManager.onGameStateChanged -= EnemyAttacks;
     }
 
 
-    public void EnemyAttacks(GameManager.GameState newState)
+    public void EnemyAttacks(SceneManager.GameState newState)
     {
-        if(newState == GameManager.GameState.enemyTurn && !hasAttacked)
+        if(newState == SceneManager.GameState.enemyTurn && !hasAttacked)
         {
             StartCoroutine(DelayAttackStart());
         }
@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
         player.currentParts -= enemyInstance.enemyToFace.enemyRobot.attack;
         if (player.currentParts <= 0)
         {
-            GameManager.Instance.UpdateGameState(GameManager.GameState.finishScreen);
+            SceneManager.Instance.UpdateGameState(SceneManager.GameState.finishScreen);
         }
         hasAttacked = true;
     }

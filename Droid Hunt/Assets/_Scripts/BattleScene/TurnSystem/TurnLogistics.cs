@@ -29,7 +29,7 @@ public class TurnLogistics : MonoBehaviour
     {
         isPlayerTurn = false;
         enemyTurn +=1;
-        GameManager.Instance.UpdateGameState(GameManager.GameState.enemyTurn);
+        SceneManager.Instance.UpdateGameState(SceneManager.GameState.enemyTurn);
     }
 
     public void EndEnemyTurn()
@@ -42,6 +42,6 @@ public class TurnLogistics : MonoBehaviour
         {
             playerHand.StartDrawProcess();
         }
-        GameManager.Instance.UpdateGameState(GameManager.GameState.playerTurn);
+        SceneManager.Instance.UpdateGameState(SceneManager.GameState.playerTurn);
     }
 }

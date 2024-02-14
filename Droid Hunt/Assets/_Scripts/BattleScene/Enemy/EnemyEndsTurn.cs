@@ -18,7 +18,7 @@ public class EnemyEndsTurn : MonoBehaviour
         yield return new WaitUntil(() => enemyAttack.hasAttacked); // Wait until enemy has attacked
         yield return new WaitForSeconds(1.5f);
         EndTurn();
-        GameManager.Instance.UpdateGameState(GameManager.GameState.playerTurn);
+        SceneManager.Instance.UpdateGameState(SceneManager.GameState.playerTurn);
     }
 
     private void EndTurn()

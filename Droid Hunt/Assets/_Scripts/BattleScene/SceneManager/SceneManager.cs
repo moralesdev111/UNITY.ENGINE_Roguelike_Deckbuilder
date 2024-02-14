@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static SceneManager Instance;
     public PlayerHand playerHand;
     public Player player;
     public EnemyInstance enemy;

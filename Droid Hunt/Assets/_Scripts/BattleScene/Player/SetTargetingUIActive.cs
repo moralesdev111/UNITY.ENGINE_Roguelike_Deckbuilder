@@ -16,13 +16,13 @@ public class SetTargetingUIActive : MonoBehaviour, IPointerClickHandler
     private void CheckIfWeCanPlayCard(PointerEventData eventData)
     {
         CardInstance currentCard = eventData.pointerClick.GetComponent<CardInstance>();
-        if (GameManager.Instance.player.currentEnergy >= currentCard.card.energyCost)
+        if (SceneManager.Instance.player.currentEnergy >= currentCard.card.energyCost)
         {
             if(currentCard.card.cardType == Card.CardType.utility)
             {
-                GameManager.Instance.player.currentEnergy -= currentCard.card.energyCost;
-                GameManager.Instance.player.currentParts += currentCard.card.utilityValue;
-                GameManager.Instance.playerHand.Container.Remove(currentCard.card);
+                SceneManager.Instance.player.currentEnergy -= currentCard.card.energyCost;
+                SceneManager.Instance.player.currentParts += currentCard.card.utilityValue;
+                SceneManager.Instance.playerHand.Container.Remove(currentCard.card);
                 Destroy(currentCard.gameObject);
             }
             else

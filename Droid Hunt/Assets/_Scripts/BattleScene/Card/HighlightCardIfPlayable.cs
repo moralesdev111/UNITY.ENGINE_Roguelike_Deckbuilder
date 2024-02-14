@@ -13,9 +13,9 @@ public class HighlightCardIfPlayable : MonoBehaviour
 
     private void HighlightIfAllowed()
     {
-        if (GameManager.Instance.currentGameState == GameManager.GameState.playerTurn)
+        if (SceneManager.Instance.currentGameState == SceneManager.GameState.playerTurn)
         {
-            if (GameManager.Instance.player.currentEnergy >= GetComponent<CardInstance>().card.energyCost)
+            if (SceneManager.Instance.player.currentEnergy >= GetComponent<CardInstance>().card.energyCost)
             {
                 image.color = material.color;
             }

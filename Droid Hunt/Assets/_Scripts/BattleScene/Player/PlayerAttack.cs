@@ -9,14 +9,14 @@ public class PlayerAttack : MonoBehaviour
         if(cardInPlay.card.cardType == Card.CardType.attack)
         {
             enemy.currentParts -= cardInPlay.card.utilityValue;
-            GameManager.Instance.player.currentEnergy -= cardInPlay.card.energyCost;
-            GameManager.Instance.playerHand.Container.Remove(cardInPlay.card);
+            SceneManager.Instance.player.currentEnergy -= cardInPlay.card.energyCost;
+            SceneManager.Instance.playerHand.Container.Remove(cardInPlay.card);
             Destroy(transform.parent.gameObject);
         }
         
         if (enemy.currentParts <= 0)
         {
-            GameManager.Instance.UpdateGameState(GameManager.GameState.finishScreen);
+            SceneManager.Instance.UpdateGameState(SceneManager.GameState.finishScreen);
         }
     }
 }

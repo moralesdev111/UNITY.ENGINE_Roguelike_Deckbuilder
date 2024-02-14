@@ -10,6 +10,6 @@ public class SceneLoader : ScriptableObject
 
     public void ChangeScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
 }
