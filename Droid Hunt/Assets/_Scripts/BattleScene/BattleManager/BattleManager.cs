@@ -15,6 +15,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] EnemyInstance enemyInstance;
     [SerializeField] PlayerProgression playerProgression;
     [SerializeField] PassSaveDataBetweenScenes passSaveDataBetweenScenes;
+    [SerializeField] ClearSaveFile clearSaveFile;
 
 
     private void Start()
@@ -26,6 +27,7 @@ public class BattleManager : MonoBehaviour
    {
     blurPanel.SetActive(true);
     loseFinishScreenCanvas.SetActive(true);
+    clearSaveFile.ClearSaveFiles();
    }
 
    public void Victory()

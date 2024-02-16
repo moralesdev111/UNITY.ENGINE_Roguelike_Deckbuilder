@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class ClearSaveFile : MonoBehaviour
+[CreateAssetMenu(fileName = "ClearSaveFile", menuName ="ScriptableObjects/ClearSaveFile")]
+public class ClearSaveFile : ScriptableObject
 {
-    void Start()
-    {
-        //ClearSaveFiles();
-    }
-
     
-
      public void ClearSaveFiles()
     {
         string savePath = Application.persistentDataPath + "/player.save";

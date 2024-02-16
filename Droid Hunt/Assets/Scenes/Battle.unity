@@ -511,6 +511,7 @@ MonoBehaviour:
   enemyInstance: {fileID: 119376287}
   playerProgression: {fileID: 11400000, guid: cd59ff3e8dbc9e347b7f2415a816f9e2, type: 2}
   passSaveDataBetweenScenes: {fileID: 11400000, guid: d4f5e82173180c842bc5845c8931ecf7, type: 2}
+  clearSaveFile: {fileID: 11400000, guid: 2b2d51dea6fc4724fbc42454e25516d8, type: 2}
 --- !u!4 &307302258
 Transform:
   m_ObjectHideFlags: 0
