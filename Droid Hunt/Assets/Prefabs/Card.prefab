@@ -1045,8 +1045,8 @@ MonoBehaviour:
   cardAbility: {fileID: 8104534852177095748}
   artwork: {fileID: 8182683104791783240}
   energyCost: {fileID: 1121372766751906010}
-  attackMaterial: {fileID: 2100000, guid: 665fd82e3ef6f8540b3c79a8cc7e18a8, type: 2}
-  utilityMaterial: {fileID: 2100000, guid: a350fb21a29b8194086868e29a57a6f0, type: 2}
+  attackMaterial: {fileID: 2100000, guid: f4b439f0d64333c4e927cf83318018f2, type: 2}
+  utilityMaterial: {fileID: 2100000, guid: b758897081d156d46858c2c177a8a90f, type: 2}
 --- !u!114 &2820693170238426499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,5 +1086,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197eee867bfd144a98624cb06282dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 3648de959c0e4c34badfabb702d38d3f, type: 2}
+  material: {fileID: 2100000, guid: b758897081d156d46858c2c177a8a90f, type: 2}
   image: {fileID: 4886722967938377838}
