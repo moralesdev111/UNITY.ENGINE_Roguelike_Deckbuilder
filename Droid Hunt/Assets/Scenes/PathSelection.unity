@@ -442,6 +442,50 @@ Transform:
   - {fileID: 1366728006}
   m_Father: {fileID: 1208144791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &833165627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833165628}
+  - component: {fileID: 833165629}
+  m_Layer: 0
+  m_Name: DebugClearSaveFile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833165628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833165627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1208144791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833165629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833165627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69c8642dca3ea04884cd4a120c49374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &879701084
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +500,8 @@ GameObject:
   - component: {fileID: 879701086}
   - component: {fileID: 879701089}
   m_Layer: 0
-  m_Name: BattleLocation1
-  m_TagString: BattleLocation
+  m_Name: BattleLocation2
+  m_TagString: BattleLocation2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -810,6 +854,12 @@ MonoBehaviour:
   player2DLocation: {fileID: 1042912233}
   movementSpeed: 2
   chosenPath: {fileID: 0}
+  firstVisited: 0
+  secondVisited: 0
+  thirdVisited: 0
+  fourthVisited: 0
+  fifthVisited: 0
+  passSaveDataBetweenScenes: {fileID: 11400000, guid: d4f5e82173180c842bc5845c8931ecf7, type: 2}
 --- !u!1 &1113340297
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,8 +968,8 @@ GameObject:
   - component: {fileID: 1164783491}
   - component: {fileID: 1164783490}
   m_Layer: 0
-  m_Name: BattleLocation2
-  m_TagString: BattleLocation
+  m_Name: BattleLocation3
+  m_TagString: BattleLocation3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1125,6 +1175,7 @@ Transform:
   m_Children:
   - {fileID: 1042912233}
   - {fileID: 629605123}
+  - {fileID: 833165628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240774250
@@ -1209,8 +1260,8 @@ GameObject:
   - component: {fileID: 1246404229}
   - component: {fileID: 1246404228}
   m_Layer: 0
-  m_Name: BattleLocation3
-  m_TagString: BattleLocation
+  m_Name: BattleLocation4
+  m_TagString: BattleLocation4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2292,7 +2343,7 @@ GameObject:
   - component: {fileID: 1658200736}
   m_Layer: 0
   m_Name: BattleLocationFinal
-  m_TagString: BattleLocation
+  m_TagString: BattleLocation5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

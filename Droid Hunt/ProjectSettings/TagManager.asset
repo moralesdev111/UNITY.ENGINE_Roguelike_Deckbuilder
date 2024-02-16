@@ -8,6 +8,10 @@ TagManager:
   - P2Camera
   - BattleCanvas
   - BattleLocation
+  - BattleLocation2
+  - BattleLocation3
+  - BattleLocation4
+  - BattleLocation5
   layers:
   - Default
   - TransparentFX

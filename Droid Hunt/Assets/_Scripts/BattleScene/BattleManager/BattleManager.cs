@@ -14,6 +14,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Player player;
     [SerializeField] EnemyInstance enemyInstance;
     [SerializeField] PlayerProgression playerProgression;
+    [SerializeField] PassSaveDataBetweenScenes passSaveDataBetweenScenes;
 
 
     private void Start()
@@ -33,5 +34,26 @@ public class BattleManager : MonoBehaviour
     winFinishScreenCanvas.SetActive(true);
     playerProgression.gold += enemyInstance.enemyToFace.enemyRobot.reward;
     playerProgression.currentParts = player.currentParts;
+    
+    if(enemyInstance.enemyToFace.enemyRobot.robotName == "Xthree")
+    {
+      passSaveDataBetweenScenes.firstVisited = true;
+    }
+    else if(enemyInstance.enemyToFace.enemyRobot.robotName == "Mark 1")
+    {
+      passSaveDataBetweenScenes.secondVisited = true;
+    }
+    else if(enemyInstance.enemyToFace.enemyRobot.robotName == "XX")
+    {
+      passSaveDataBetweenScenes.thirdVisited = true;
+    }
+    else if(enemyInstance.enemyToFace.enemyRobot.robotName == "Zero")
+    {
+      passSaveDataBetweenScenes.fourthVisited = true;
+    }
+    else if(enemyInstance.enemyToFace.enemyRobot.robotName == "Devil")
+    {
+      passSaveDataBetweenScenes.fifthVisited = true;
+    }
    }
 }
