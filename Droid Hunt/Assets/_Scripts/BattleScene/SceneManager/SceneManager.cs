@@ -15,6 +15,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] EnemyAttack aIActions;
     [SerializeField] EnemyEndsTurn enemyEndsTurn;
     [SerializeField] BattleManager battleManager;
+    public Animator p1Animator;
 
 
 

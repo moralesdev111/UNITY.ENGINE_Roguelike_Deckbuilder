@@ -29,8 +29,11 @@ public class EnemyAttack : MonoBehaviour
 
     IEnumerator DelayAttackStart()
     {
-        yield return new WaitForSeconds(1f);
+        SceneManager.Instance.p1Animator.SetBool("takeDamage", true);
+        yield return new WaitForSeconds(1.5f);
+        
         player.currentParts -= enemyInstance.enemyToFace.enemyRobot.attack;
+         SceneManager.Instance.p1Animator.SetBool("takeDamage", false);
         if (player.currentParts <= 0)
         {
             SceneManager.Instance.UpdateGameState(SceneManager.GameState.finishScreen);
