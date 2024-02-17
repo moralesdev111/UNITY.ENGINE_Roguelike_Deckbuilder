@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 4989476675865270}
   - component: {fileID: 95204184301125184}
   m_Layer: 0
-  m_Name: SpiderOrange
+  m_Name: Mark 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
