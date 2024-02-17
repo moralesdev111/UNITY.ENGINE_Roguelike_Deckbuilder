@@ -7,10 +7,12 @@ public class Player : Robot
     [SerializeField] TextMeshProUGUI currentEnergyDisplay;
     [SerializeField] TextMeshProUGUI currentGoldDisplay;
     [SerializeField] PlayerProgression playerProgression;
+    [SerializeField] ClearSaveFile clearSaveFile;
 
 
     void Start()
     {
+        //clearSaveFile.ClearSaveFiles();
         SetupStats();
     }
 

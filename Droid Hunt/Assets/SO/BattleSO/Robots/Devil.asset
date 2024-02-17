@@ -16,4 +16,4 @@ MonoBehaviour:
   attack: 25
   maxParts: 20
   reward: 40
-  robotModel: {fileID: 0}
+  robotModel: {fileID: 628286421929302457, guid: 3a6372176fa95c34189695752b687ce0, type: 3}

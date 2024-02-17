@@ -7,11 +7,13 @@ public class EnemyInstance : Robot
 {
     [SerializeField] TextMeshProUGUI robotName;
     [SerializeField] TextMeshProUGUI attackDamage;
+    [SerializeField] Transform parent;
     public EnemyToFace enemyToFace;
 
 
     void Start()
     {
+        InstantiateRobot();
         SetupStats();
     }
 
@@ -31,5 +33,9 @@ public class EnemyInstance : Robot
         currentParts = enemyToFace.enemyRobot.maxParts;
         robotName.text = enemyToFace.enemyRobot.robotName;
         attackDamage.text = enemyToFace.enemyRobot.attack.ToString();
+    }
+    public void InstantiateRobot()
+    {
+        GameObject robotInstance = Instantiate(enemyToFace.enemyRobot.robotModel,parent);
     }
 }
