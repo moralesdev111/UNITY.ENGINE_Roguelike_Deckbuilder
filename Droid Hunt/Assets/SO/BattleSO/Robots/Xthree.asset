@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Xthree
   m_EditorClassIdentifier: 
   robotName: Xthree
-  attack: 12
-  maxParts: 13
+  attack: 7
+  maxParts: 9
   reward: 10
   robotModel: {fileID: 6609577785169660584, guid: 7eb3cfe70594dd2428451f55b8ba01aa, type: 3}

@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 879701087}
   - component: {fileID: 879701086}
   - component: {fileID: 879701089}
+  - component: {fileID: 879701090}
   m_Layer: 0
   m_Name: BattleLocation2
   m_TagString: BattleLocation2
@@ -601,6 +602,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 53625692}
+--- !u!114 &879701090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879701084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1108e3c26b2a44f8d14e2010b362f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPathTarget: {fileID: 879701086}
+  visitedSprite: {fileID: 390408224, guid: a5129965d9f7c604cb1842f6662f7e07, type: 3}
 --- !u!1 &950301688
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +938,7 @@ GameObject:
   - component: {fileID: 1164783492}
   - component: {fileID: 1164783491}
   - component: {fileID: 1164783490}
+  - component: {fileID: 1164783494}
   m_Layer: 0
   m_Name: BattleLocation3
   m_TagString: BattleLocation3
@@ -1069,6 +1085,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1164783494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164783488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1108e3c26b2a44f8d14e2010b362f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPathTarget: {fileID: 1164783491}
+  visitedSprite: {fileID: 390408224, guid: a5129965d9f7c604cb1842f6662f7e07, type: 3}
 --- !u!1 &1203634932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1244,7 @@ GameObject:
   - component: {fileID: 1246404230}
   - component: {fileID: 1246404229}
   - component: {fileID: 1246404228}
+  - component: {fileID: 1246404232}
   m_Layer: 0
   m_Name: BattleLocation4
   m_TagString: BattleLocation4
@@ -1360,6 +1391,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1246404232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246404226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1108e3c26b2a44f8d14e2010b362f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPathTarget: {fileID: 1246404229}
+  visitedSprite: {fileID: 390408224, guid: a5129965d9f7c604cb1842f6662f7e07, type: 3}
 --- !u!1 &1295195183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +2016,7 @@ GameObject:
   - component: {fileID: 1589266944}
   - component: {fileID: 1589266943}
   - component: {fileID: 1589266947}
+  - component: {fileID: 1589266948}
   m_Layer: 0
   m_Name: BattleLocation0
   m_TagString: BattleLocation
@@ -2117,6 +2163,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 53625692}
+--- !u!114 &1589266948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589266942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1108e3c26b2a44f8d14e2010b362f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPathTarget: {fileID: 1589266943}
+  visitedSprite: {fileID: 390408224, guid: a5129965d9f7c604cb1842f6662f7e07, type: 3}
 --- !u!1 &1629881003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2356,7 @@ GameObject:
   - component: {fileID: 1658200738}
   - component: {fileID: 1658200737}
   - component: {fileID: 1658200736}
+  - component: {fileID: 1658200740}
   m_Layer: 0
   m_Name: BattleLocationFinal
   m_TagString: BattleLocation5
@@ -2442,6 +2503,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1658200740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658200734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1108e3c26b2a44f8d14e2010b362f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPathTarget: {fileID: 1658200737}
+  visitedSprite: {fileID: 390408224, guid: a5129965d9f7c604cb1842f6662f7e07, type: 3}
 --- !u!1 &1717867201
 GameObject:
   m_ObjectHideFlags: 0
