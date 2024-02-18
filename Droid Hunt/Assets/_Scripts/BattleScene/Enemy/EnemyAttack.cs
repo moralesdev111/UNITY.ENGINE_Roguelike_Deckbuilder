@@ -29,6 +29,7 @@ public class EnemyAttack : MonoBehaviour
 
     IEnumerator DelayAttackStart()
     {
+        AudioManager.Instance.PlaySFX("aiAttack");
         SceneManager.Instance.p1Animator.SetBool("takeDamage", true);
         yield return new WaitForSeconds(1.5f);
         

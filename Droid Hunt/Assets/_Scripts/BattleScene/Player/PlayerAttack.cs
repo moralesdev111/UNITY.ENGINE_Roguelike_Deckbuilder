@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public void HandleAttack(EnemyInstance enemy, CardInstance cardInPlay)
     {
         SceneManager.Instance.p1Animator.SetBool("attack", true);
+        AudioManager.Instance.PlaySFX("p1Attack");
         if(cardInPlay.card.cardType == Card.CardType.attack)
         {
             enemy.currentParts -= cardInPlay.card.utilityValue;
